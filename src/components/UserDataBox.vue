@@ -9,7 +9,7 @@ let userData = JSON.parse(localStorage.getItem('userData'));
 
 const handleLogout = () => {
   authStore.logout();
-  router.push('/login');
+  router.push('/Noty-app/login');
 };
 </script>
 

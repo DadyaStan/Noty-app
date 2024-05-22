@@ -23,7 +23,7 @@ const login = async () => {
   await authStore.login(credentials.value);
   if (authStore.isAuth) {
     console.log(authStore.isAuth)
-    router.push('/');
+    router.push('/Noty-app/');
   }
 };
 
