@@ -1,0 +1,44 @@
+<script setup>
+
+</script>
+
+<template>
+  <div class="modal">
+
+
+    <div class="modal auth-modal">
+      <div class="modal__logo-box">
+        <img src="@/components/Modals/assets/regular-modal.svg" alt="SVG Icon" />
+      </div>
+      <div class="modal__text-box">
+        <h4 class="auth__heading">Добро пожаловать</h4>
+        <p class="auth__add-text">Введите ваш логин и пароль</p>
+      </div>
+      <form class="modal__form-box" @submit.prevent="login">
+        <div class="modal__input-box">
+          <label for="" class="modal__label">Логин</label>
+          <input
+              type="text"
+              v-model="credentials.username"
+              class="modal__input"
+              placeholder="E-mail">
+        </div>
+        <div class="modal__input-box">
+          <label for="" class="modal__label">Пароль</label>
+          <input
+              type="password"
+              v-model="credentials.password"
+              class="modal__input"
+              placeholder="password">
+        </div>
+        <button class="modal__button" type="submit">
+          Войти
+        </button>
+      </form>
+    </div>
+  </div>
+</template>
+
+<style scoped lang="scss">
+@import "assets/Modal";
+</style>
