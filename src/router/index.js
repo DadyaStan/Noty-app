@@ -11,10 +11,10 @@ const authGuard = (to, from, next) => {
   console.log(authStore.isAuth)
   console.log(authStore.getUserData)
   console.log(localStorage.getItem("userId"))
-  if (authStore.isAuth && to.path === '/login') {
-    next('/');
-  } else if (!authStore.isAuth && to.path !== '/login') {
-    next('/login');
+  if (authStore.isAuth && to.path === '/Noty-app/login') {
+    next('/Noty-app/');
+  } else if (!authStore.isAuth && to.path !== '/Noty-app/login') {
+    next('/Noty-app/login');
   } else {
     next();
   }
@@ -22,19 +22,19 @@ const authGuard = (to, from, next) => {
 
 const routes = [
   {
-    path: '/',
+    path: '/Noty-app/',
     name: 'notes-list',
     component: NotesListView,
     beforeEnter: authGuard,
   },
   {
-    path: '/users-list',
+    path: '/Noty-app/users-list',
     name: 'users-list',
     component: UsersList,
     beforeEnter: authGuard,
   },
   {
-    path: '/login',
+    path: '/Noty-app/login',
     name: 'login',
     component: AuthView,
     beforeEnter: authGuard,
